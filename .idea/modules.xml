@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/assignments/AlfredBot/AlfredBot.iml" filepath="$PROJECT_DIR$/assignments/AlfredBot/AlfredBot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assignments/CafeBusinessLogic/CafeBusinessLogic.iml" filepath="$PROJECT_DIR$/assignments/CafeBusinessLogic/CafeBusinessLogic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assignments/CafeJava/CafeJava.iml" filepath="$PROJECT_DIR$/assignments/CafeJava/CafeJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assignments/FirstJavaProgram/FirstJavaProgram.iml" filepath="$PROJECT_DIR$/assignments/FirstJavaProgram/FirstJavaProgram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assignments/Puzzling/Puzzling.iml" filepath="$PROJECT_DIR$/assignments/Puzzling/Puzzling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java_february.iml" filepath="$PROJECT_DIR$/.idea/java_february.iml" />
+    </modules>
+  </component>
+</project>
