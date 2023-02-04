@@ -1,2 +1,7 @@
 /assignments_java
 LINKS.md
+
+
+node_modules/
+.sass-cache
+*.txt
