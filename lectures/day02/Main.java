@@ -7,6 +7,8 @@ public class Main {
         tesla1.setColor("yellow");
         tesla3.Drive();
         tesla2.Drive();
+        System.out.println(Tesla.getCEO());
+        System.out.println(Tesla.getCARS());
         // System.out.println(tesla1.getColor());
         // System.out.println(tesla2.getColor());
 
