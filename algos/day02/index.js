@@ -1,3 +1,7 @@
+var name = "Tyler"
+
+console.log(name)
+
 /**
  * A class to represents a single item of a SinglyLinkedList that can be
  * linked to other Node instances to form a list of linked nodes.
@@ -25,7 +29,13 @@ class Node {
      * - Space: O(?).
      * @returns {boolean}
      */
-    isEmpty() {}
+    isEmpty() {
+        if(this.head === null){
+            return true
+        } else {
+            return false
+        }
+    }
   
     /**
      * Creates a new node with the given data and inserts it at the back of
@@ -35,7 +45,13 @@ class Node {
      * @param {any} data The data to be added to the new node.
      * @returns {SinglyLinkedList} This list.
      */
-    insertAtBack(data) {}
+    insertAtBack(data) {
+        let runner = this.head
+        while(runner !== null ){
+            runner = runner.next;
+            console.log(runner)
+        }
+    }
   
     /**
      * Creates a new node with the given data and inserts it at the back of
