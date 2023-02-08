@@ -128,6 +128,7 @@ average() {}
   after completing it, uncomment the code.
   */
   const emptyList = new SinglyLinkedList();
+  const SLL = new SinglyLinkedList();
   
   // const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
   // const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);

@@ -4,8 +4,8 @@
 
 |                                           |     |
 |-----------------------------------------------------------------------|:--------:|
-| [Zoo Keeper: Part 1](https://github.com/tmax818/ZooKeeperI)           | Practice |
-| [Zoo Keeper: Part 2](https://github.com/tmax818/ZooKeeperII)          | Core     |
-| [CareSoft Interfaces](https://github.com/tmax818/BankAccount)         | Core     |
+| [Car and Driver]()               | Practice |
+| [Zoo Keeper]()                  | Core     |
+| [CareSoft Interfaces]()         | Core     |
 
 
