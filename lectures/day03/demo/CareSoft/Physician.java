@@ -26,14 +26,23 @@ public class Physician extends User implements HIPAACompliantUser {
 // TO DO: Implement HIPAACompliantUser!
     @Override
     public boolean assignPin(int pin) {
-        // TODO Auto-generated method stub
-        return false;
+        int numlen = Integer.toString(pin).length();
+        // System.out.println(numlen == 4);
+        // if(numlen == 4){
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+        return numlen == 4;
     }
 
     @Override
     public boolean accessAuthorized(Integer confirmedAuthID) {
-        // TODO Auto-generated method stub
-        return false;
+        System.out.println(confirmedAuthID);
+        System.out.println(this.id);
+        System.out.println(confirmedAuthID == this.id);
+
+        return confirmedAuthID == this.id;
     }
         
         // TO DO: Setters & Getters
