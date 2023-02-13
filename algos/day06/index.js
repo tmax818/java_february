@@ -158,11 +158,13 @@ removeVal(val) {}
  */
 prepend(newVal, targetVal) {}
 
+////////////////////// ! MONDAY ///////////////////////
+
 /**
  * Concatenates the nodes of a given list onto the back of this list.
  * - Time: O(?).
  * - Space: O(?).
- * @param {SinglyLinkedList} addList An instance of a different list whose
+ * @param {SinglyLinkedList} addList An instance of a different list
  *    whose nodes will be added to the back of this list.
  * @returns {SinglyLinkedList} This list with the added nodes.
  */
