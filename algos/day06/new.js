@@ -93,20 +93,42 @@ class Node {
         const oldHead = this.head
         this.head = oldHead.next
         return oldHead.data
+      }
+      
+      /**
+       * Removes the last node of this list.
+       * @returns {any} The data from the node that was removed.
+      */
+     removeBack() {
+       if(this.isEmpty()){
+           return null;
+       }
+       let runner = this.head
+       let tail = this.head
+       while(runner.next !== null){
+        tail = runner
+        runner = runner.next
+       }
+       tail.next = null
+       return (runner.data)
+       
     }
-
-    /**
-     * Removes the last node of this list.
-     * @returns {any} The data from the node that was removed.
-     */
-    removeBack() {}
 
     /**
      * Determines whether or not the given search value exists in this list.
      * @param {any} val The data to search for in the nodes of this list.
      * @returns {boolean}
      */
-    contains(val) {}
+    contains(val) {
+      let runner = this.head
+      while(runner){
+        if(runner.data === val){
+          return true
+        }
+        runner = runner.next;
+      }
+      return false
+    }
 
     /**
      * Retrieves the data of the second to last node in this list.
@@ -115,12 +137,17 @@ class Node {
      * @returns {any} The data of the second to last node or null if there is no
      *    second to last node.
      */
-    secondToLast() {}
+    secondToLast(){
+      let runner = this.head
+      if(this.isEmpty() || runner.next === null){console.log("it worked!!");return null}
+      while(runner.next.next){
+        runner = runner.next
+      }
+      return runner.data
+    }
 
     /**
      * Removes the node that has the matching given val as it's data.
-     * - Time: O(?).
-     * - Space: O(?).
      * @param {any} val The value to compare to the node's data to find the
      *    node to be removed.
      * @returns {boolean} Indicates if a node was removed or not.
@@ -149,9 +176,16 @@ class Node {
 }
 
 const sll = new SinglyLinkedList();
-sll.insertAtBack(1)
-sll.insertAtBack(2)
-sll.insertAtFront(0)
-console.log(sll.removeHead())
+// sll.insertAtBack(1)
+// sll.insertAtBack(2)
+// sll.insertAtBack(3)
+// sll.insertAtBack(4)
+// sll.insertAtFront(0)
+// console.log(sll.removeHead())
 
-console.log(sll)
+// console.log(sll)
+// console.log(sll.removeBack())
+// console.log(sll.contains(1))
+// console.log(sll.contains(2))
+// console.log(sll.contains(42))
+console.log(sll.secondToLast())
