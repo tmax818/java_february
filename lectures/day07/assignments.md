@@ -14,7 +14,6 @@
 
 |                                           |     |
 |---------------------------------------------------------------|:--------:|
-| [Save Travels](https://github.com/tmax818/SaveTravels)	                    | Practice |
-| [Edit Expenses](https://github.com/tmax818/EditExpenses)	                    | Practice |
-| [Full CRUD Save Travels](https://github.com/tmax818/FullCrudSaveTravels)	    | Core     |
-| [Languages](https://github.com/tmax818/Languages)	                        | Practice |
+| [Burger Tracker 1]()	                                        | Practice |
+| [Burger Tracker 2]()	                                        | Practice |
+| [Save Travels](https://github.com/tmax818/SaveTravels)	    | Core |
