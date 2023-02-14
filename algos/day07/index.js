@@ -23,14 +23,23 @@ class BinarySearchTree {
      * Determines if this tree is empty.
      * @returns {boolean} Indicates if this tree is empty.
      */
-    isEmpty() {}
+    isEmpty() {
+      return this.root === null;
+    }
   
     /**
      * Retrieves the smallest integer data from this tree.
      * @param {Node} current The node that is currently accessed from the tree as the tree is being traversed.
      * @returns {number} The smallest integer from this tree.
      */
-    min(current = this.root) {}
+    min(current = this.root) {
+      if(this.isEmpty()) return null;
+
+      while(current.left !== null){
+        current = current.left
+      }
+      return current.data;
+    }
   
     /**
      * Retrieves the smallest integer data from this tree.
@@ -44,7 +53,14 @@ class BinarySearchTree {
      * @param {Node} current The node that is currently accessed from the tree as the tree is being traversed.
      * @returns {number} The largest integer from this tree.
      */
-    max(current = this.root) {}
+    max(current = this.root) {
+      if(this.isEmpty()) return null;
+
+      while(current.right !== null){
+        current = current.right
+      }
+      return current.data
+    }
   
     /**
      * Retrieves the largest integer data from this tree.
@@ -130,3 +146,13 @@ class BinarySearchTree {
   //   .insert(44)
   //   .insert(66)
   //   .insert(90);
+
+  const bst = new BinarySearchTree()
+  bst.root = new BSTNode(34)
+  bst.root.left = new BSTNode(24)
+  bst.root.left.right = new BSTNode(27)
+  bst.root.left.left = new BSTNode(14)
+  bst.root.right = new BSTNode(42)
+  // console.log(bst.min())
+  console.log(bst.max())
+  // console.log(bst.isEmpty())
