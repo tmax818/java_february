@@ -5,8 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
-import org.springframework.lang.NonNull;
 
 @Entity
 @Table(name="books")
@@ -16,7 +18,12 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
+    @Size(min=1, message="must include title")
     private String title;
+
+    @NotNull
+    @Size(min=2, max=10, message="that's not really your name!!!")
     private String author;
 
     private Integer pages;

@@ -36,10 +36,12 @@
     <form:form action="/books" method="post" modelAttribute="book">
         <div class="form-control">
             <form:label path="title">title</form:label>
+            <form:errors path="title"/>
             <form:input path="title"></form:input>
         </div>
         <div class="form-control">
             <form:label path="author">author</form:label>
+            <form:errors path="author"/>
             <form:input path="author"></form:input>
         </div>
         <div class="form-control">

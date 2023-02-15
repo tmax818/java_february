@@ -19,34 +19,30 @@
     <script type="text/javascript" src="/js/app.js"></script><!-- change to match your file/naming structure -->
 </head>
 <body>
-    <table class="table">
-        <thead>
-            <th>title</th>
-            <th>author</th>
-            <th>pages</th>
-            <th>Actions</th>
-        </thead>
-        <c:forEach var="book" items="${books}">
-            <tr>
-                <td>
-                    <a href="/books/${book.id}">
-                        ${book.title}
-                    </a>
-                </td>
-                <td>${book.author}</td>
-                <td>${book.pages}</td>
-                <td>
-                    <a href="/books/edit/${book.id}">edit</a>
-                    <form action="/books/${book.id}" method="post">
-                        <input type="hidden" name="_method" value="delete">
-                        <input type="submit" value="Delete">
-                    </form>   
-                </td>
-            </tr>
-        </c:forEach>
-    </table>
+    <h1>Edit a Book</h1>
+${session.title}
+    <h2>New an improved form</h2>
+    
+    <form:form action="/books/${book.id}" method="post" modelAttribute="book">
+        <input type="hidden" name="_method" value="put">
+        <div class="form-control">
+            <form:label path="title">title</form:label>
+            <form:errors path="title"></form:errors>
+            <form:input path="title" value="${title}"></form:input>
+        </div>
+        <div class="form-control">
+            <form:label path="author">author</form:label>
+            <form:errors path="author"></form:errors>
+            <form:input path="author"></form:input>
+        </div>
+        <div class="form-control">
+            <form:label path="pages">pages</form:label>
+            <form:input path="pages"></form:input>
+        </div>
+        <input type="submit" value="add book">
 
-   <a class="btn btn-primary" href="/books/new">Add a Book</a>
+    </form:form>
+   
 </body>
 </html>
 

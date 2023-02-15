@@ -32,8 +32,18 @@ public class BookService {
     }
 
     //! UPDATE
+    public void updateBook(Book book) {
+        bookRepository.save(book);
+    }
 
     //!DELETE
+    public void deleteBook(Book book) {
+        bookRepository.delete(book);
+    }
+
+ 
+
+
 
     
 }
