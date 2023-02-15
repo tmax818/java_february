@@ -61,31 +61,32 @@ class BinarySearchTree {
       }
       return current.data
     }
-  
+    
     /**
      * Retrieves the largest integer data from this tree.
      * @param {Node} current The node that is currently accessed from the tree as the tree is being traversed.
      * @returns {number} The largest integer from this tree.
-     */
-    maxRecursive(current = this.root) {}
-  
-    // Logs this tree horizontally with the root on the left.
-    print(node = this.root, spaceCnt = 0, spaceIncr = 10) {
-      if (!node) {
-        return;
+    */
+   maxRecursive(current = this.root) {}
+   
+   // Logs this tree horizontally with the root on the left.
+   print(node = this.root, spaceCnt = 0, spaceIncr = 10) {
+     if (!node) {
+       return;
       }
-  
+      
       spaceCnt += spaceIncr;
       this.print(node.right, spaceCnt);
-  
+      
       console.log(
         " ".repeat(spaceCnt < spaceIncr ? 0 : spaceCnt - spaceIncr) +
-          `${node.data}`
-      );
-  
-      this.print(node.left, spaceCnt);
-    }
-
+        `${node.data}`
+        );
+        
+        this.print(node.left, spaceCnt);
+      }
+      
+      ////! TUESDAY //////////////////
     /**
  * Determines if this tree contains the given searchVal.
  * - Time: O(?).
@@ -103,7 +104,6 @@ contains(searchVal) {}
  * @returns {boolean} Indicates if the searchVal was found.
  */
 containsRecursive(searchVal, current = this.root) {}
-////! TUESDAY //////////////////
 /**
  * Calculates the range (max - min) from the given startNode.
  * - Time: O(?).
