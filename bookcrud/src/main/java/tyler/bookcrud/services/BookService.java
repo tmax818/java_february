@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import tyler.bookcrud.repositories.BookRepository;
 import java.util.List;
+import java.util.Optional;
 
 import tyler.bookcrud.models.Book;;
 @Service // this makes this file a service in Spring
@@ -22,6 +23,12 @@ public class BookService {
     //! READ ALL
     public List<Book> allBooks(){
         return bookRepository.findAll();
+    }
+
+    //! READ ONE
+    public Book getOneBook(Long id){
+        Optional<Book> optionalBook = bookRepository.findById(id);
+        return optionalBook.orElse(null);
     }
 
     //! UPDATE

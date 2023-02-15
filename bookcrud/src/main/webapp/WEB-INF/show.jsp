@@ -19,20 +19,10 @@
     <script type="text/javascript" src="/js/app.js"></script><!-- change to match your file/naming structure -->
 </head>
 <body>
-    <table class="table">
-        <c:forEach var="book" items="${books}">
-            <tr>
-                <td>
-                    <a href="/books/${book.id}">
-                        ${book.title}
-                    </a>
-                </td>
-                <td>${book.author}</td>
-                <td>${book.pages}</td>
-            </tr>
-        </c:forEach>
-    </table>
-    <p>I really like the book<c:out value="${title}"/> by <c:out value="${author}"></c:out> it is only <c:out value="${pages}"></c:out>!!!</p>
+
+    <h1>Title ${book.title}</h1>
+    <h2>Author: ${book.author}</h2>
+    ${book}
    <a class="btn btn-primary" href="/books/new">Add a Book</a>
 </body>
 </html>

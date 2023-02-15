@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.lang.NonNull;
+
 @Entity
 @Table(name="books")
 public class Book {
@@ -16,6 +18,7 @@ public class Book {
 
     private String title;
     private String author;
+
     private Integer pages;
 
     // needed to be a Java Bean
@@ -29,10 +32,20 @@ public class Book {
         this.pages = pages;
     }
 
+
+    
     // needed to be a Java Bean
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
     public String getTitle() {
         return this.title;
     }
+
 
     public void setTitle(String title) {
         this.title = title;

@@ -1,4 +1,4 @@
-.0# session demo
+## bookcrud
 
 - [ ] update [application.properties](src/main/resources/application.properties)
 
@@ -6,7 +6,7 @@
 # Where are jsp files? HERE!
 spring.mvc.view.prefix=/WEB-INF/
 # Data Persistence
-spring.datasource.url=jdbc:mysql://localhost:3306/<<YOUR_SCHEMA_NAME>>
+spring.datasource.url=jdbc:mysql://localhost:3306/books
 spring.datasource.username=root
 spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update
@@ -113,6 +113,7 @@ spring.mvc.hiddenmethod.filter.enabled=true
 add 
 
 ```java
+//MainController.java
     @Autowired BookService bookservice;
 ```
 to connect service with controller
@@ -124,7 +125,8 @@ to connect service with controller
 
 add 
 ```java
-List<Book> books = bookService.allBooks();
+//BookService.java
+@Autowired BookRepository bookRepository;
 ```
 to connect service with repository.
 

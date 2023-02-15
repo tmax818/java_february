@@ -8,7 +8,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,7 +30,7 @@ public class MainController {
     //! CREATE
 
     @RequestMapping("/books/new")
-    public String newBook(){
+    public String newBook(@ModelAttribute("book")Book book){
         return "new.jsp";
     }
 
@@ -37,18 +41,12 @@ public class MainController {
 
     @PostMapping("/books")
     public String createBook(
-        @RequestParam("title")String title,
-        @RequestParam("author")String author,
-        @RequestParam("pages")Integer pages, HttpSession session
+        // @RequestParam("title")String title,
+        // @RequestParam("author")String author,
+        // @RequestParam("pages")Integer pages, HttpSession session
+        @ModelAttribute("book")Book book
     ){
-        Book newBook = new Book(title, author, pages);
-        bookService.createBook(newBook);
-        // Book book = new Book(title, author, pages);
-        // System.out.println(book.getTitle());
-        // books.add(book);
-        // session.setAttribute("title", title);
-        // session.setAttribute("author", author);
-        // session.setAttribute("pages", pages);
+        bookService.createBook(book);
         return "redirect:/";
     }
 
@@ -66,14 +64,14 @@ public class MainController {
 
     
     //! READ ONE
-    
-    @RequestMapping("/books/1")
-    public String show(Model model){
-        // model.addAttribute("book", books.get(1));
-        // model.addAttribute("books", books);
+
+    @GetMapping("/books/{id}")
+    public String show(@PathVariable("id")Long id, Model model){
+        Book book = bookService.getOneBook(id);
+        model.addAttribute("book", book);
         return "show.jsp";
     }
-
+    
 
     //! UPDATE
 

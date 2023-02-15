@@ -21,15 +21,34 @@
 <body>
     <h1>Add a Book</h1>
 
-    <form action="/books" method="post">
+     <form action="/books" method="post">
         <div class="form-control">
             title: <input type="text" name="title" id="">
             author: <input type="text" name="author" id="">
             pages: <input type="number" name="pages" id="">
             <input type="submit" value="add book">
         </div>
+        
+    </form> 
 
-    </form>
+    <h2>New an improved form</h2>
+    
+    <form:form action="/books" method="post" modelAttribute="book">
+        <div class="form-control">
+            <form:label path="title">title</form:label>
+            <form:input path="title"></form:input>
+        </div>
+        <div class="form-control">
+            <form:label path="author">author</form:label>
+            <form:input path="author"></form:input>
+        </div>
+        <div class="form-control">
+            <form:label path="pages">pages</form:label>
+            <form:input path="pages"></form:input>
+        </div>
+        <input type="submit" value="add book">
+
+    </form:form>
    
 </body>
 </html>

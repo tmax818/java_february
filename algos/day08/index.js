@@ -94,7 +94,22 @@ class BinarySearchTree {
  * @param {number} searchVal The number to search for in the node's data.
  * @returns {boolean} Indicates if the searchVal was found.
  */
-contains(searchVal) {}
+contains(searchVal) {
+  let current = this.root;
+    if(current.data === searchVal) return true;
+    while(current){
+      if(current.data < searchVal){
+        current = current.right
+      } else if(current.data > searchVal) {
+        current = current.left
+      } else {
+        return true
+      }
+    }
+    return false
+
+
+}
 
 /**
  * Determines if this tree contains the given searchVal.
@@ -182,5 +197,8 @@ range(startNode = this.root) {}
   bst.root.left.left = new BSTNode(14)
   bst.root.right = new BSTNode(42)
   // console.log(bst.min())
-  console.log(bst.max())
+  // console.log(bst.max())
+console.log(bst.contains(27)) // => true
+  console.log(bst.contains(17)) // => false
+
   // console.log(bst.isEmpty())
