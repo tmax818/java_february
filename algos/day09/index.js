@@ -139,7 +139,10 @@ range(startNode = this.root) {}
  * @param {number} newVal The data to be added to a new node.
  * @returns {BinarySearchTree} This tree.
  */
-insert(newVal) {}
+insert(newVal) {
+
+  return this;
+}
 
 /**
  * Inserts a new node with the given newVal in the right place to preserver
