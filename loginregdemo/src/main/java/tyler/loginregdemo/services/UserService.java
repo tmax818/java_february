@@ -31,6 +31,8 @@ public class UserService {
         if(result.hasErrors()){
             return null;
         }
+
+        // ! at this point everything is okay
         // TO-DO: Additional validations!
 
         // hash the password
@@ -40,6 +42,32 @@ public class UserService {
     }
     public User login(LoginUser newLoginObject, BindingResult result) {
         // TO-DO: Additional validations!
-        return null;
+        if(!this.checkEmail(newLoginObject.getEmail())){
+            result.rejectValue("email", "noEmail", "Invalid Credentials");;
+        }
+        if(result.hasErrors()){
+            return null;
+        }
+        // ! at this point we found the email
+        User user = userRepo.findByEmail(newLoginObject.getEmail()).orElse(null);
+        if(!BCrypt.checkpw(newLoginObject.getPassword(), user.getPassword())){
+            result.rejectValue("password", "Password", "Invalid Credentials");
+        } 
+        if(result.hasErrors()){
+            return null;
+        }
+        return user;
+
+
+
+    }
+
+    public boolean checkEmail(String email){
+        Optional<User> user = userRepo.findByEmail(email);
+        if(user.isPresent()){
+            return true;
+        } else {
+            return false;
+        }
     }
 }

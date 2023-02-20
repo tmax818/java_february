@@ -230,6 +230,19 @@ toArrPostorder(node = this.root, vals = []) {}
 
 //! MONDAY
 
+/* fullTree
+                    root
+                <-- 25 -->
+              /            \
+            15             50
+          /    \         /    \
+        10     22      35     70
+      /   \   /  \    /  \   /  \
+    4    12  18  24  31  44 66  90
+*/
+
+/**
+
 /**
  * BFS order: horizontal rows top-down left-to-right.
  * Converts this BST into an array following Breadth First Search order.

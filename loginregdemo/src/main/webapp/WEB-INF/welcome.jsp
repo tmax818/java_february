@@ -21,7 +21,8 @@
    <div class="container">
 <h1>It works</h1>
 ${userId}
-${password}
+<a href="/logout">logout</a>
+
 </div>
 </body>
 </html>
