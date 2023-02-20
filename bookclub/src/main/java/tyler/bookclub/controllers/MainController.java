@@ -43,7 +43,7 @@ public class MainController {
             return "index.jsp";
         }
         session.setAttribute("userId", user.getId());
-        return "redirect:/welcome";
+        return "redirect:/books";
     }
 
     @PostMapping("/login")
@@ -60,7 +60,7 @@ public class MainController {
             return "index.jsp";
         }
         session.setAttribute("userId", userToLogin.getId());
-        return "redirect:/welcome";
+        return "redirect:/books";
     }
 
     @GetMapping("/welcome")
