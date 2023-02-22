@@ -32,21 +32,30 @@
         <th>Posted By</th>
     </thead>
     <tbody>
-        <c:forEach var="book" items="${books}">
+
             <tr>
-                <td>
-                <a href="/books/${book.id}">
-                    ${book.title}</a>
-                </td>
+                <td>${book.title}</td>
                 <td>${book.author}</td>
                 <td>${book.user.userName}</td>
             </tr>
 
-        </c:forEach>
+
     </tbody>
 </table>
 
-<a class="btn btn-primary" href="/books/new">Create a Book</a>
+<!-- <c:choose>
+    <c:when test="${book.user.id == userId}"> -->
+        <c:if test="${book.user.id == userId}">
+            <a class="btn btn-warning" href="/books/edit/${book.id}">Edit</a>
+            <form action="/books/${book.id}" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="Delete">
+            </form>
+        </c:if>
+    <!-- </c:when>
+        c:otherwise like default in a switch statement.
+</c:choose> -->
+
 
 </div>
 </body>
