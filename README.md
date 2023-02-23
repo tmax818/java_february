@@ -95,3 +95,11 @@
 |------|-----|--------------------------------------------------------------------------------------------|:--------:|
 | 3    | M/T | [Project Manager](ProjectManager)	             | Optional |
 | 3    |     | [Belt Exam](BeltExam)                             |     Exam |
+
+
+
+
+
+http://phxc1b.rfer.us/CAREEREDCMp58e
+
+
