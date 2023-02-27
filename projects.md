@@ -8,16 +8,30 @@ Camps - summer camp management software
 Notes: java back end react front end
 
 goals: github stuff
-figma board 
+figma board
+
+goals: basic front end
 
 Carson
 goal: brainstorm
+goal: chatbot 
 
 Anthony 
 goal: brainstorming
+goal: jframe jswing 2d game
 
 Harry
 goal: brainstorming
+goal: replicate a business clone site
 
 Adam
 goal:
+
+Bo
+goal: brainstorming
+
+Dustin
+goal: brainstorming
+
+Chris
+goal: predition model 
