@@ -11,22 +11,26 @@ goals: github stuff
 figma board
 
 goals: basic front end = set up on friday
-goals: connect front to back
+goals: connect front to back - accomplished
+goals: validations, create users and activities
 
 Carson
 goal: brainstorm
 goal: chatbot 
 goal: finish functionality 
+goal: finish backend 
 
 Anthony 
 goal: brainstorming
 goal: jframe jswing 2d game
 goal: jpannel visual 
+goal: styling for front 
 
 Harry
 goal: brainstorming
 goal: replicate a business clone site
-goal: Amazon credit card functionality 
+goal: Amazon credit card functionality
+goal: work on functionality cart 
 
 Adam
 goal:
@@ -36,22 +40,28 @@ goal: brainstorming
 
 Dustin
 goal: brainstorming
+goal: back end
 
 Chris
-goal: predition model 
+goal: predition model - gave up
+goal: chat feature manually implement TCP
 
 Rochelle and Dominic
-idea: computer keyboards shopping info
+idea: computer keyboards shopping info = keyhub
 friday: trello board 
 goal: github
+goal: brush up on react. 
 
-adrian charlie
+adrian charlie jonnie
 idea: social media gyms video games
-goal: 
+goal: user stories yesterday
+goal: git pull and push  
 
 Luis
 idea: undecided
-goal: brianstorm ideas
+goal: brianstorm ideas: Cochella/festival rideshare app
+goal: 
 
-Jonnie
-idea: 
+Jared
+idea: guild spot/ alliance
+goal: MERN
