@@ -40,22 +40,22 @@ public static void Basic3(int[] array){
 // TODO: Create an array with all the odd integers between 1 and 255 (inclusive).
 
 public static void Basic4(){
-    int[] oddArray = new int[256];
-    for(int i = 0; i <= 255; i++){
+    int[] oddArray = new int[256/2];
+    int idx = 0;
+    for(int i = 0; i <= 255/2; i++){
+            oddArray[i] = i + (i + 1);
+        }
 
-    }
     System.out.println(Arrays.toString(oddArray));
 }
 
 public static void Basic4_2(){
     ArrayList<Integer> oddArray = new ArrayList<>();
-    // System.out.println(Arrays.toString(oddArray));
-    for(int i = 0; i <= 255; i++){
-        if(i % 2 == 1){
-            oddArray.add(i);
-        }
+    for(int i = 1; i <= 255; i += 2){
+        oddArray.add(i);
     }
     System.out.println(oddArray);
+
 }
 
 // TODO: Given an array and a value Y, count and print the number of array values greater than Y.
